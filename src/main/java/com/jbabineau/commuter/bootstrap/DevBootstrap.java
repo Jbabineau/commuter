@@ -12,7 +12,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class DevBootstrap implements ApplicationListener<ContextRefreshedEvent>{
     private TripTypeRepository tripTypeRepository;
-    private PersonRepository personRepository
+    private PersonRepository personRepository;
 
     @Autowired
     public DevBootstrap(TripTypeRepository tripTypeRepository, PersonRepository personRepository) {
@@ -36,7 +36,7 @@ public class DevBootstrap implements ApplicationListener<ContextRefreshedEvent>{
         personRepository.save(new Person("Jimmy", "Babs", "babineau.james@gmail.com","001" ));
         personRepository.save(new Person("Denwa", "Griffon", "denwa.griffon@gmail.com","002" ));
         personRepository.save(new Person("Zak", "Attack", "ZakAttack003@gmail.com","003" ));
-        
+
     }
 
 
