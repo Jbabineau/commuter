@@ -3,7 +3,7 @@ package com.jbabineau.commuter.data.entities;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "TripType")
+@Table(name = "trip_type")
 public class TripType {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)

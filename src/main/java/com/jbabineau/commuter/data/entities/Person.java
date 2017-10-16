@@ -1,11 +1,10 @@
 package com.jbabineau.commuter.data.entities;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.util.Set;
 
 @Entity
+@Table(name = "PERSON")
 public class Person {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -16,6 +15,9 @@ public class Person {
     private String email;
     // Possibly use with Single Signon.
     private String uniqueIdentifier;
+
+    @Transient
+    private Set<Trip> trips;
 
     public Long getId() {
         return id;
